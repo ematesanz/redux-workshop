@@ -1,13 +1,14 @@
 import React from 'react';
 import Menu from '../Menu';
 
-const Header = props => {
-    return (
-        <header className="header">
-            <Menu orientation="horizontal"/>
-        </header>
+import buttonsData from '../../buttonsData';
 
-    )
-}
+const handleClick = () => console.log('Click Header');
+
+const Header = () => (
+    <header className="header">
+        <Menu buttonContents={buttonsData} onButtonClick={handleClick}/>
+    </header>
+);
 
 export default Header;

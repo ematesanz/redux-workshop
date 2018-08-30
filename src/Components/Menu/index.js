@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../Button';
 
-const Menu = (props) => {
-    let className = 'Menu';
-    if (props.isVertical) {
+const Menu = ({isVertical, buttonContents, onButtonClick, activeIndexButton}) => {
+    let className = 'menu';
+    if (isVertical) {
         className = `${className} ${className}--vertical`;
     } else {
         className = `${className} ${className}--horizontal`;
@@ -11,10 +11,7 @@ const Menu = (props) => {
 
     return (
         <div className={className}>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button disabled/>
+            { buttonContents.map((btn, id)=> <Button key={id} onClick={onButtonClick} active> {btn} </Button>)}
         </div>
     )
 };
