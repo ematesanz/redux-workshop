@@ -3,9 +3,10 @@ import Menu from '../Menu';
 
 const Header = props => {
     return (
-        <header>
+        <header className="header">
             <Menu orientation="horizontal"/>
         </header>
+
     )
 }
 

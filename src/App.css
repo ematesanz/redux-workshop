@@ -1,5 +1,6 @@
 .App {
     display:grid;
+    grid-gap: 5px;
     grid-template-columns: 1fr 3fr;
 
     grid-template-areas:
@@ -7,7 +8,6 @@
             "sidebar content"
 }
 
-
 .header { grid-area:header; background: #bcb9af }
 .sidebar { grid-area:sidebar; background:#aebbbc }
-.content { grid-area:content; background: #f7e9e6 }
+.content { grid-area:content; background: #e1edff }

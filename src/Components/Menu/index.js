@@ -2,16 +2,21 @@ import React from 'react';
 import Button from '../Button';
 
 const Menu = (props) => {
-    const orientation = `menu--${props.orientation}`;
+    let className = 'Menu';
+    if (props.isVertical) {
+        className = `${className} ${className}--vertical`;
+    } else {
+        className = `${className} ${className}--horizontal`;
+    }
 
     return (
-        <div className={orientation}>
-            <Button active="true"/>
+        <div className={className}>
             <Button/>
             <Button/>
             <Button/>
+            <Button disabled/>
         </div>
     )
-}
+};
 
 export default Menu;
