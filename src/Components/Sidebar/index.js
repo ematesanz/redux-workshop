@@ -1,13 +1,10 @@
 import React from 'react';
 import Menu from '../Menu';
 
-import buttonsData from '../../buttonsData';
+const Sidebar = ({buttonsData, activeIndexButton, changeActiveIndex}) => (
 
-const handleClick = () => console.log('Click Sidebar');
-
-const Sidebar = () => (
     <div className="sidebar">
-        <Menu isVertical  buttonContents={buttonsData} onButtonClick={handleClick}/>
+        <Menu isVertical  buttonContents={buttonsData} activeIndexButton={activeIndexButton} changeActiveIndex={changeActiveIndex} />
     </div>
 );
 

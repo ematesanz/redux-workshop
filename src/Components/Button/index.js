@@ -2,6 +2,7 @@ import React from 'react';
 import './Button.css';
 
 const Button = ({active, onClick, children}) => {
+
     let className = 'button';
     if (active) {
         className = `${className} ${className}--active`;
