@@ -1,0 +1,16 @@
+.tabs-header {
+    list-style: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.tabs-item {
+    display: list-item;
+    float: left;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+.tabs-content {
+    padding: 6px 0px 20px 55px;
+}
