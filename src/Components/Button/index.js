@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({active, onClick, children}) => {
+const Button = ({ active, onClick, children }) => {
 
     let className = 'button';
     if (active) {
