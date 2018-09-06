@@ -27,7 +27,7 @@ class App extends Component {
                 <div className="content">
                     Content {activeIndexButton + 1}
                     { activeIndexButton === 0 && <Tabs activeIndex={0} items={tabItems}/> }
-                    { activeIndexButton === 1 && <Accordion items={accordionItems}/> }
+                    { activeIndexButton === 1 && <Accordion items={accordionItems} activeItemsLimit={3}/> }
                 </div>
             </div>
         );

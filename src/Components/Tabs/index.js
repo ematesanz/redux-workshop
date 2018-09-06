@@ -17,7 +17,7 @@ class Tabs extends Component {
 
         return (
             <div>
-                <ul className="tabs-header">{this.props.items.map(({title}, index) =>
+                <ul className="tabs-header">{items.map(({title}, index) =>
                     <li
                         className="tabs-item"
                         key={index}

@@ -5,18 +5,38 @@ import './Accordion.css';
 
 class Accordion extends Component {
 
-    state = {
-        activeIndex: null
+    static defaultProps = {
+        activeItemsLimit: 0
     }
 
-    setActiveIndex(activeIndex) {
-        return () => this.setState({activeIndex})
+    state = {
+        activeIndexes: []
+    }
+
+    setActiveIndex = (activeIndex) => () => {
+        let activeIndexes = this.state.activeIndexes.slice();
+        const { activeItemsLimit } = this.props;
+        const indexPosition = activeIndexes.indexOf(activeIndex);
+        const isAlreadyActive = indexPosition >= 0;
+
+        if (isAlreadyActive) {
+            activeIndexes.splice(indexPosition, 1)
+        } else {
+            activeIndexes.push(activeIndex);
+            if (activeItemsLimit !== 0 && activeIndexes.length > activeItemsLimit) {
+                activeIndexes.shift();
+            }
+        }
+
+        return this.setState({ activeIndexes })
+    }
+
+    isActiveIndex(index) {
+        return this.state.activeIndexes.indexOf(index) > -1
     }
 
     render() {
-        const { activeIndex } = this.state;
         const { items } = this.props;
-
         return (
             <div className="accordion">
                 { items.map(({ title, content }, index) =>
@@ -24,7 +44,7 @@ class Accordion extends Component {
                         key={index}
                         title={title}
                         onHeaderClick={this.setActiveIndex(index)}
-                        isActive={index === activeIndex}
+                        isActive={this.isActiveIndex(index)}
                     >
                         {content}
                     </AccordionItem>
@@ -35,4 +55,3 @@ class Accordion extends Component {
 }
 
 export default Accordion;
-
