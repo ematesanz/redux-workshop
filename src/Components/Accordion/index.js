@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AccordionItem from './../AccordionItem';
 
 import './Accordion.css';
 
-const Accordion = ({ items }) => (
+class Accordion extends Component {
 
-    <div className="accordion">
-        {items.map(({ title, content }) =>
-            <AccordionItem isActive title={title} onHeaderClick>
-                <p>{content}</p>
-            </AccordionItem>
-         )}
-    </div>
-);
+    state = {
+        activeIndex: null
+    }
+
+    setActiveIndex(activeIndex) {
+        return () => this.setState({activeIndex})
+    }
+
+    render() {
+        const { activeIndex } = this.state;
+        const { items } = this.props;
+
+        return (
+            <div className="accordion">
+                { items.map(({ title, content }, index) =>
+                    <AccordionItem
+                        key={index}
+                        title={title}
+                        onHeaderClick={this.setActiveIndex(index)}
+                        isActive={index === activeIndex}
+                    >
+                        {content}
+                    </AccordionItem>
+                 )}
+            </div>
+        )
+    }
+}
 
 export default Accordion;
 

@@ -2,15 +2,17 @@
     list-style: none;
     overflow: hidden;
     background-color: #f1f1f1;
+    font-size: 1.5em;
 }
 
-.tabs-item {
-    display: list-item;
-    float: left;
-    cursor: pointer;
-    padding: 14px 16px;
-}
+    .tabs-item {
+        display: list-item;
+        float: left;
+        cursor: pointer;
+        padding: 1em;
+    }
 
 .tabs-content {
-    padding: 6px 0px 20px 55px;
+    font-size: 1.3em;
+    padding: 0em 4em;
 }

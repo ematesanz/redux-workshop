@@ -22,7 +22,8 @@ class Tabs extends Component {
                         className="tabs-item"
                         key={index}
                         index={index}
-                        onClick={() => this.setState({activeIndex:index})}>
+                        onClick={() => this.setState({activeIndex:index})}
+                    >
                             {title}
                     </li>
                 )}</ul>
