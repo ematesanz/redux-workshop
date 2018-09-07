@@ -1,4 +1,4 @@
-const buttonsData = ['Tabs', 'Accordion', 'button 3'];
+const buttonsData = ['Tabs', 'Accordion', 'Public IP'];
 
 const tabItems = [
     {title: 'Tab 1', content: 'Content Tab 1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},

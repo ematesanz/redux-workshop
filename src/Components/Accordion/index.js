@@ -32,7 +32,8 @@ class Accordion extends Component {
     }
 
     isActiveIndex(index) {
-        return this.state.activeIndexes.indexOf(index) > -1
+        // return this.state.activeIndexes.indexOf(index) > -1
+        return this.state.activeIndexes.includes(index)
     }
 
     render() {
