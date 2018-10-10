@@ -1,18 +1,18 @@
-.tabs-header {
+.tab-header {
     list-style: none;
     overflow: hidden;
     background-color: #f1f1f1;
     font-size: 1.5em;
 }
 
-    .tabs-item {
+    .tab-item {
         display: list-item;
         float: left;
         cursor: pointer;
         padding: 1em;
     }
 
-.tabs-content {
+.tab-content {
     font-size: 1.3em;
     padding: 0em 4em;
 }

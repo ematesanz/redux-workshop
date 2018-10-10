@@ -1,4 +1,8 @@
-const buttonsData = ['Tabs', 'Accordion', 'Public IP'];
+const buttonItems = [
+    { key: 'tab', name: 'Tab'},
+    { key: 'accordion', name: 'Accordion'},
+    { key: 'ip', name: 'Public IP'}
+];
 
 const tabItems = [
     {title: 'Tab 1', content: 'Content Tab 1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
@@ -17,5 +21,5 @@ const accordionItems = [
 ];
 
 
-export  { buttonsData, tabItems, accordionItems };
+export  { buttonItems, tabItems, accordionItems };
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './Tabs.css';
+import './Tab.css';
 
-class Tabs extends Component {
+class Tab extends Component {
 
     static defaultProps = {
         activeIndex: 0
@@ -17,9 +17,9 @@ class Tabs extends Component {
 
         return (
             <div>
-                <ul className="tabs-header">{items.map(({title}, index) =>
+                <ul className="tab-header">{items.map(({title}, index) =>
                     <li
-                        className="tabs-item"
+                        className="tab-item"
                         key={index}
                         index={index}
                         onClick={() => this.setState({activeIndex:index})}
@@ -27,11 +27,11 @@ class Tabs extends Component {
                             {title}
                     </li>
                 )}</ul>
-                <div className="tabs-content"> {this.props.items[activeIndex].content} </div>
+                <div className="tab-content"> {this.props.items[activeIndex].content} </div>
             </div>
         )
     }
 }
 
-export default Tabs;
+export default Tab;
 

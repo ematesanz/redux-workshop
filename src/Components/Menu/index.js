@@ -9,8 +9,8 @@ const Menu = ({isVertical, buttonContents, activeIndexButton, changeActiveIndex}
 
     return (
         <div className={className}>
-            { buttonContents.map((btn, index)=>
-                <Button key={index} onClick={() => changeActiveIndex(index)} active={index===activeIndexButton}> {btn} </Button>)}
+            { buttonContents.map(({ key, name }, index) =>
+                <Button key={index} name={key} changeActiveIndex={() => changeActiveIndex(index)} active={index===activeIndexButton}> {name} </Button>)}
         </div>
     )
 };
