@@ -5,6 +5,7 @@ import Sidebar from './Components/Sidebar';
 import Tab from './Components/Tab';
 import Accordion from './Components/Accordion';
 import MyIp from './Components/MyIp';
+import WithIp from './Components/WithIp';
 
 import './App.css';
 
@@ -33,6 +34,15 @@ class App extends Component {
                     { activeIndexButton === 0 && <Tab activeIndex={0} items={tabItems}/> }
                     { activeIndexButton === 1 && <Accordion items={accordionItems} activeItemsLimit={3}/> }
                     { activeIndexButton === 2 && <MyIp/>}
+
+                    <WithIp>{ ip => (
+                    <div>
+                        <MyIp ip={ip}/>
+                        <MyIp ip={ip}/>
+                        <MyIp ip={ip}/>
+                        <MyIp ip={ip}/>
+                    </div>)}
+                    </WithIp>
                 </div>
             </div>
         );
