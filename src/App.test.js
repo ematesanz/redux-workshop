@@ -58,20 +58,5 @@ describe('App', () => {
             expect(content).toHaveLength(1);
         })
     })
-
-    // describe('Render specific component', () => {
-    //     const HeaderComponent = wrapper.find(Header);
-
-    //     it('Tab', () => {
-    //         const tabComponent = wrapper.find('Tab');
-    //         const onClick = jest.fn();
-    //         //const tabButton = wrapper.find('[name="tab"]');
-    //         const button = shallow(<Button onClick={onClick} />);
-
-    //         button.simulate('click');
-    //         expect(onClick).toHaveBeenCalled();
-
-    //     })
-    // })
 });
 

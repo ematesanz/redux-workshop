@@ -2,10 +2,10 @@ import React from 'react';
 import Menu from '../Menu';
 import { IPConsumer } from '../IPContext';
 
-const Header = ({buttonsData, activeIndexButton, changeActiveIndex} ) => (
+const Header = ({buttonsData} ) => (
 
 	<header className="header">
-		<Menu buttonContents={buttonsData} activeIndexButton={activeIndexButton} changeActiveIndex={changeActiveIndex} />
+		<Menu buttonContents={buttonsData} />
 		<IPConsumer>
 			{(context) => (
 				<span> {context.ip} </span>

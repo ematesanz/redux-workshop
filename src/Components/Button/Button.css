@@ -1,3 +1,7 @@
+
+.button {
+    max-width: 80px;
+}
 .button--active {
     color: red;
 }

@@ -1,3 +1,4 @@
 .menu--vertical {
-    width: 80px;
+    display: flex;
+    flex-direction: column;   
 }

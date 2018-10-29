@@ -2,10 +2,10 @@ import React from 'react';
 import Menu from '../Menu';
 import { IPConsumer } from '../IPContext';
 
-const Sidebar = ({buttonsData, activeIndexButton, changeActiveIndex}) => (
+const Sidebar = ({ buttonsData }) => (
 
     <div className="sidebar">
-        <Menu isVertical  buttonContents={buttonsData} activeIndexButton={activeIndexButton} changeActiveIndex={changeActiveIndex} />
+        <Menu isVertical  buttonContents={buttonsData} />
         <IPConsumer>
             {(context) => (
                 <span> {context.ip} </span>
